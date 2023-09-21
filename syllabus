@@ -1,0 +1,24 @@
+aws
+---------
+ec2
+iam
+vpc
+s3
+route53
+rds
+cloud watch
+cloud trail
+cloud formation
+sns
+sqs
+aws code pipeline
+eks
+==================================================================================================
+Devops
+-----------
+Git
+Jenkins
+Docker
+Artifacts
+Ansible
+Terraform
