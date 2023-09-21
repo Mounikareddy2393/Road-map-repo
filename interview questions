@@ -1,0 +1,55 @@
+Ec2:
+Amazon Elastic Compute Cloud (Amazon EC2) provides on-demand, scalable computing capacity in the Amazon Web Services (AWS) Cloud
+ You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage.
+Route 53?
+Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service
+It transilates human readable domain names into into Ip addresses.
+Route internet traffic to the resources for your domain
+When a user opens a web browser and enters your domain name (example.com) or subdomain name (acme.example.com) in the address bar, Route 53 helps connect the browser with your website or web application.
+IAM
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources.
+IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+IAM provides the infrastructure necessary to control authentication and authorization for your AWS account.
+ Each user can have its own password for access to the AWS Management Console. 
+User
+Group
+Role 
+Policy
+EBS
+Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. 
+Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, scalable, high-performance block-storage service designed for Amazon Elastic Compute Cloud (Amazon EC2).
+ELB
+Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets and virtual appliances in one or more Availability Zones (AZs).
+cloud formation
+AWS CloudFormation is a service that helps you.
+
+set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS.
+create a template that describes all the AWS resources that you want (like Amazon EC2 instances or Amazon RDS DB instances), and CloudFormation takes care of provisioning and configuring those resources for you. You don't need to individually create and configure AWS resources
+Templates
+A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. For example, in a template, you can describe an Amazon EC2 instance, such as the instance type, the AMI ID, block device mappings, and its Amazon EC2 key pair name. Whenever you create a stack, you also specify a template that CloudFormation uses to create whatever you described in the template.
+Cloud watch
+Amazon CloudWatch is a monitoring and management service that provides data and actionable insights for AWS, on-premises, hybrid, and other cloud applications and infrastructure resources.
+
+Lambda
+
+Q)task is to stop and start ec2 by using lambda
+A)
+1.create iam role firstand give permissions, set ec2 allow
+2.create lambda function for two for start and stop
+3.create and configure then test and deploy
+
+
+4 exicute function URL
+5.for particular time add triggers
+code
+Import boto3
+Region = “us-east-2”
+Instance = [             ]
+Ec2 = boto3.client(‘ec2’, region_name=region)
+Def lambda_handler((event, context):
+Ec2.stop_instance(instansIds=instances)
+Print(‘stopped your instances: ‘Str(instances))
+
+
+
+
